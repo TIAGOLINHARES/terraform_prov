@@ -1,0 +1,18 @@
+logar com credenciais na aws
+
+aws configure
+aws ec2 describe-security-groups
+--
+
+
+terraform init
+terraform plan
+terraform apply
+
+passos
+
+iniciar terraform
+conectar aws com as keys de autorizacao
+criar secret group
+incluir chave publica na aws
+copoai chave privada pra maquina e passar ela no comando ssh

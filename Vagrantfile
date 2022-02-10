@@ -26,6 +26,11 @@ Vagrant.configure("2") do |config|
 		
 		vm_bases.vm.provision "shell",
 				inline: "cp /vagrant/terraform /bin "
+		
+		vm_bases.vm.provision "shell",
+            inline: "cp /vagrant/id_bionic /home/vagrant && \
+                     chmod 600 /home/vagrant/id_bionic && \
+                     chown vagrant:vagrant /home/vagrant/id_bionic"
 				
 		vm_bases.vm.provision "shell",
 				inline: "apt-get update && \
@@ -41,7 +46,9 @@ Vagrant.configure("2") do |config|
 		vm_bases.vm.provision "shell",
 				inline: "cp /vagrant/configs/terraform/main.tf /home/vagrant "				 
 		
+				
 		
+				
 		end
 		
 		

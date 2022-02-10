@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
 					 ./aws/install"
 		
 		vm_bases.vm.provision "shell",
-				inline: "cp /vagrant/configs/terraform/main.tf /vagrant/terrafor "				 
+				inline: "cp /vagrant/configs/terraform/main.tf /home/vagrant "				 
 		
 		
 		end
